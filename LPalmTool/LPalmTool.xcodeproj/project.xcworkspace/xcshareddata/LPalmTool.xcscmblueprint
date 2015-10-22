@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "71b12919-b30e-fd43-914f-84b2ce4c2a76",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "71b12919-b30e-fd43-914f-84b2ce4c2a76" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "71b12919-b30e-fd43-914f-84b2ce4c2a76" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C2429B0F-4BE3-4CC6-AB9C-8BB24A71A862",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "71b12919-b30e-fd43-914f-84b2ce4c2a76" : "SVNTQProject\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "LPalmTool",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "branches\/LPalmToolProject\/LPalmTool\/LPalmTool.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/192.168.1.88\/svn\/TQProject",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "71b12919-b30e-fd43-914f-84b2ce4c2a76"
+    }
+  ]
+}
