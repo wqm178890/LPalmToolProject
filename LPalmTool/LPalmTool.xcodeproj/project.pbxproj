@@ -64,6 +64,7 @@
 		412071F61BD52CA700B99303 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 412071F51BD52CA700B99303 /* libz.tbd */; };
 		412071F81BD52E7F00B99303 /* NewsSetting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 412071F71BD52E7F00B99303 /* NewsSetting.plist */; settings = {ASSET_TAGS = (); }; };
 		412071FB1BD52F7C00B99303 /* Skin in Resources */ = {isa = PBXBuildFile; fileRef = 412071FA1BD52F7C00B99303 /* Skin */; settings = {ASSET_TAGS = (); }; };
+		4166EC1E1BD91EF80072775B /* SSJailbreakCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A177391BD7BC7400BE67F4 /* SSJailbreakCheck.m */; settings = {ASSET_TAGS = (); }; };
 		41A177471BD7BC7400BE67F4 /* SystemServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A177261BD7BC7400BE67F4 /* SystemServices.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-fobjc-arc"; }; };
 		41A177481BD7BC7400BE67F4 /* NSObject+PerformBlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A177291BD7BC7400BE67F4 /* NSObject+PerformBlockAfterDelay.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-fobjc-arc"; }; };
 		41A177491BD7BC7400BE67F4 /* SSAccelerometerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A1772B1BD7BC7400BE67F4 /* SSAccelerometerInfo.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -73,7 +74,6 @@
 		41A1774D1BD7BC7400BE67F4 /* SSCarrierInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A177331BD7BC7400BE67F4 /* SSCarrierInfo.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-fobjc-arc"; }; };
 		41A1774E1BD7BC7400BE67F4 /* SSDiskInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A177351BD7BC7400BE67F4 /* SSDiskInfo.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-fobjc-arc"; }; };
 		41A1774F1BD7BC7400BE67F4 /* SSHardwareInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A177371BD7BC7400BE67F4 /* SSHardwareInfo.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-fobjc-arc"; }; };
-		41A177501BD7BC7400BE67F4 /* SSJailbreakCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A177391BD7BC7400BE67F4 /* SSJailbreakCheck.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-fobjc-arc"; }; };
 		41A177511BD7BC7400BE67F4 /* SSLocalizationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A1773B1BD7BC7400BE67F4 /* SSLocalizationInfo.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-fobjc-arc"; }; };
 		41A177521BD7BC7400BE67F4 /* SSMemoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A1773D1BD7BC7400BE67F4 /* SSMemoryInfo.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-fobjc-arc"; }; };
 		41A177531BD7BC7400BE67F4 /* SSNetworkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A1773F1BD7BC7400BE67F4 /* SSNetworkInfo.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -638,7 +638,6 @@
 				412071931BD523BA00B99303 /* TQViewController.m in Sources */,
 				4120716B1BD523AF00B99303 /* NJKWebView.m in Sources */,
 				41A1774C1BD7BC7400BE67F4 /* SSBatteryInfo.m in Sources */,
-				41A177501BD7BC7400BE67F4 /* SSJailbreakCheck.m in Sources */,
 				4120716D1BD523AF00B99303 /* NJKWebViewProgressView.m in Sources */,
 				412071AA1BD523C900B99303 /* ListenNewsCtrl.m in Sources */,
 				4120716E1BD523AF00B99303 /* UMengOnlineParameterManger.m in Sources */,
@@ -677,6 +676,7 @@
 				41A1774E1BD7BC7400BE67F4 /* SSDiskInfo.m in Sources */,
 				41A177541BD7BC7400BE67F4 /* SSProcessInfo.m in Sources */,
 				41A177531BD7BC7400BE67F4 /* SSNetworkInfo.m in Sources */,
+				4166EC1E1BD91EF80072775B /* SSJailbreakCheck.m in Sources */,
 				4120718E1BD523BA00B99303 /* TQSkinManger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

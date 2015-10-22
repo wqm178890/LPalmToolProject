@@ -61,7 +61,7 @@
 #define NOTJAIL 4783242
 
 // Failed jailbroken checks
-enum {
+typedef NS_ENUM(NSInteger, JailbrokenChecks) {
     // Failed the Jailbreak Check
     KFJailbroken = 3429542,
     // Failed the OpenURL Check
@@ -86,7 +86,7 @@ enum {
     KFSymbolic = 34859,
     // Failed the File Exists Check
     KFFileExists = 6625,
-} JailbrokenChecks;
+} ;
 
 // Define the filesystem check
 #define FILECHECK [NSFileManager defaultManager] fileExistsAtPath:

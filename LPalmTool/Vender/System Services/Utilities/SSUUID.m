@@ -161,7 +161,6 @@
     
     // Jailbroken
     NSString *Jailbroken = [NSString stringWithFormat:@"%d", [SSJailbreakCheck jailbroken]];
-    
     // Headphones Attached
     NSString *HeadphonesAttached = [NSString stringWithFormat:@"%d", [SSAccessoryInfo headphonesAttached]];
     
