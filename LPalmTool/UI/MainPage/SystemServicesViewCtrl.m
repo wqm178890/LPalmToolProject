@@ -9,6 +9,10 @@
 #import "SystemServicesViewCtrl.h"
 #import "SystemServices.h"
 
+#include <ifaddrs.h>
+#include <sys/socket.h>
+#include <net/if.h>
+
 @interface SystemServicesViewCtrl ()
 
 @property (nonatomic, retain) UILabel *lblMemoryRAM;
@@ -26,10 +30,60 @@
 - (id)init{
     self = [super init];
     if (self) {
-        
+        [self getInterfaceBytes];
     }
     
     return self;
+}
+
+- (void) getInterfaceBytes
+{
+    struct ifaddrs *ifa_list = 0, *ifa;
+    if (getifaddrs(&ifa_list) == -1)
+    {
+        return;
+    }
+    
+    uint32_t iBytes = 0;
+    uint32_t oBytes = 0;
+    
+    for (ifa = ifa_list; ifa; ifa = ifa->ifa_next)
+    {
+        if (AF_LINK != ifa->ifa_addr->sa_family)
+            continue;
+        
+        if (!(ifa->ifa_flags & IFF_UP) && !(ifa->ifa_flags & IFF_RUNNING))
+            continue;
+        
+        if (ifa->ifa_data == 0)
+            continue;
+        
+        /* Not a loopback device. */
+//         en应该是wifi, pdp_ip大概是3g或者gprs, lo是环回接口
+        if (strncmp(ifa->ifa_name, "lo", 2))
+        {
+            struct if_data *if_data = (struct if_data *)ifa->ifa_data;
+            struct IF_DATA_TIMEVAL lastChange = if_data->ifi_lastchange;
+            __int32_t second = lastChange.tv_sec;
+            
+//            NSString *str=@"1368082020";//时间戳
+//            NSTimeInterval time=[str doubleValue]+28800;//因为时差问题要加8小时 == 28800 sec
+            NSTimeInterval time = second;
+            NSDate *detaildate=[NSDate dateWithTimeIntervalSince1970:time];
+            NSLog(@"date:%@",[detaildate description]);
+          
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+            
+            NSString *currentDateStr = [dateFormatter stringFromDate: detaildate];
+            NSLog(currentDateStr);
+            NSLog(@"%s", ifa->ifa_name);
+            
+            iBytes += if_data->ifi_ibytes;
+            oBytes += if_data->ifi_obytes;
+        }
+    }
+    freeifaddrs(ifa_list);
 }
 
 - (void)loadView{
