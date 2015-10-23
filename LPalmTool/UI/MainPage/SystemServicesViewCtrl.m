@@ -83,6 +83,9 @@
             oBytes += if_data->ifi_obytes;
         }
     }
+    
+    NSLog(@"");
+    
     freeifaddrs(ifa_list);
 }
 
