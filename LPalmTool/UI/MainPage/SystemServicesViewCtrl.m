@@ -85,7 +85,6 @@
     }
     
     NSLog(@"");
-    
     freeifaddrs(ifa_list);
 }
 
