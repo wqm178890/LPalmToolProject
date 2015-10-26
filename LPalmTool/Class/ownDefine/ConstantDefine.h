@@ -11,6 +11,8 @@
 
 #import "DeviceDetection.h"
 
+#define _(x) [[NSBundle mainBundle] localizedStringForKey: x value: x table:@"Localizable"]
+
 #define NAVIGATION_TOP_HEIGHT (44)//横屏32
 #define ToolBar_Height       49//(47)
 #define StatusBarHeight (20)
