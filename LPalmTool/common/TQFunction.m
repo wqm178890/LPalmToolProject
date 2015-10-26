@@ -181,3 +181,18 @@ NSString* getWebFilePath(NSString *requestUrl)
     
     return key;
 }
+
+NSString* decodeString(NSString* strUrl)
+{
+    //使用系统的decode,有问题统一在这里改.
+    strUrl = [strUrl stringByReplacingOccurrencesOfString:@"+" withString:@"%20"];
+    NSString *str = [strUrl stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    return str;
+}
+
+NSString* encodeString(NSString* strUrl)
+{
+    //使用系统的encode,有问题统一在这里改.
+    NSString *str = [strUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    return str;
+}

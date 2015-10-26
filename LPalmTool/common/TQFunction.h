@@ -20,4 +20,7 @@ NSString* getDevicePlatform();
 NSString *webCachePathForKey(NSString *key);
 NSString* getWebFilePath(NSString *requestUrl);
 
+NSString* decodeString(NSString* strUrl);
+NSString* encodeString(NSString* strUrl);
+
 #endif

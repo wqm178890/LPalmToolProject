@@ -80,10 +80,10 @@
     _tabBarView.image = [[TQSkinManger sharedManger] getBottomBarBGImage];
     [self.tabBar addSubview:_tabBarView];
     
-    [self creatButtonWithNormalName:@"Skin/tabbar_mainframe.png" andSelectName:@"Skin/tabbar_mainframeHL.png" andTitle:@"联系人" andIndex:0];
-    [self creatButtonWithNormalName:@"Skin/tabbar_contacts.png" andSelectName:@"Skin/tabbar_contactsHL.png" andTitle:@"产品" andIndex:1];
-    [self creatButtonWithNormalName:@"Skin/tabbar_discover.png" andSelectName:@"Skin/tabbar_discoverHL.png" andTitle:@"信息" andIndex:2];
-    [self creatButtonWithNormalName:@"Skin/tabbar_me.png" andSelectName:@"Skin/tabbar_meHL.png" andTitle:@"设置" andIndex:3];
+    [self creatButtonWithNormalName:@"Skin/tabbar_mainframe.png" andSelectName:@"Skin/tabbar_mainframeHL.png" andTitle:@"充电" andIndex:0];
+    [self creatButtonWithNormalName:@"Skin/tabbar_contacts.png" andSelectName:@"Skin/tabbar_contactsHL.png" andTitle:@"省电" andIndex:1];
+    [self creatButtonWithNormalName:@"Skin/tabbar_discover.png" andSelectName:@"Skin/tabbar_discoverHL.png" andTitle:@"提醒" andIndex:2];
+    [self creatButtonWithNormalName:@"Skin/tabbar_me.png" andSelectName:@"Skin/tabbar_meHL.png" andTitle:@"系统" andIndex:3];
 }
 
 - (void)creatButtonWithNormalName:(NSString *)normal andSelectName:(NSString *)selected andTitle:(NSString *)title andIndex:(int)index{

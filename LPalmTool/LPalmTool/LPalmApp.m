@@ -12,8 +12,11 @@
 #import "TQViewController.h"
 #import "TQTabBarController.h"
 
-#import "MainPageViewCtrl.h"
-#import "SystemServicesViewCtrl.h"
+#import "ChargeViewCtrl.h"
+#import "AboutSystemViewCtrl.h"
+#import "SaveElectricityViewCtrl.h"
+#import "RemindViewCtrl.h"
+
 #import "TQAppManger.h"
 
 @interface LPalmApp ()
@@ -29,24 +32,25 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    MainPageViewCtrl* mainPageCtrl = [[MainPageViewCtrl alloc]init];
-    mainPageCtrl.title = @"首页";
-    TQNavigationController * nav1 = [[TQNavigationController alloc] initWithRootViewController:mainPageCtrl];
+    ChargeViewCtrl* t1 = [[ChargeViewCtrl alloc]init];
+    t1.title = @"充电";
+    TQNavigationController * nav1 = [[TQNavigationController alloc] initWithRootViewController:t1];
     
-    SystemServicesViewCtrl* t2 = [[SystemServicesViewCtrl alloc]init];
-    t2.title = @"t2";
+    SaveElectricityViewCtrl* t2 = [[SaveElectricityViewCtrl alloc]init];
+    t2.title = @"省电";
     TQNavigationController * nav2 = [[TQNavigationController alloc] initWithRootViewController:t2];
     
-    MainPageViewCtrl* t3 = [[MainPageViewCtrl alloc]init];
-    t3.title = @"t3";
+    RemindViewCtrl* t3 = [[RemindViewCtrl alloc]init];
+    t3.title = @"提醒";
     TQNavigationController * nav3 = [[TQNavigationController alloc] initWithRootViewController:t3];
     
-    MainPageViewCtrl* t4 = [[MainPageViewCtrl alloc]init];
-    t4.title = @"t4";
+    AboutSystemViewCtrl* t4 = [[AboutSystemViewCtrl alloc]init];
+    t4.title = @"系统";
     TQNavigationController * nav4 = [[TQNavigationController alloc] initWithRootViewController:t4];
     
-    TQTabBarController*  _viewController = [[TQTabBarController alloc]init];
+    TQTabBarController*  _viewController = [[TQTabBarController alloc] init];
     _viewController.viewControllers = [NSArray arrayWithObjects:nav1, nav2, nav3, nav4, nil];
+    
     self.window.rootViewController = _viewController;
     [self.window makeKeyAndVisible];
     

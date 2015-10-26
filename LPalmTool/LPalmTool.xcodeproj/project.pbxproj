@@ -81,6 +81,15 @@
 		41A177551BD7BC7400BE67F4 /* SSProcessorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A177431BD7BC7400BE67F4 /* SSProcessorInfo.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-fobjc-arc"; }; };
 		41A177561BD7BC7400BE67F4 /* SSUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A177451BD7BC7400BE67F4 /* SSUUID.m */; settings = {ASSET_TAGS = (); COMPILER_FLAGS = "-fobjc-arc"; }; };
 		41A177591BD7C05200BE67F4 /* SystemServicesViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A177581BD7C05200BE67F4 /* SystemServicesViewCtrl.m */; settings = {ASSET_TAGS = (); }; };
+		41B693851BDE522400C7BB9B /* TQNetWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B693841BDE522400C7BB9B /* TQNetWriter.m */; settings = {ASSET_TAGS = (); }; };
+		41B693881BDE574300C7BB9B /* TQServerResponseManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B693871BDE574300C7BB9B /* TQServerResponseManage.m */; settings = {ASSET_TAGS = (); }; };
+		41B6938B1BDE58E600C7BB9B /* TQNetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B6938A1BDE58E600C7BB9B /* TQNetData.m */; settings = {ASSET_TAGS = (); }; };
+		41B6938F1BDE60AB00C7BB9B /* ChargeViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B6938E1BDE60AB00C7BB9B /* ChargeViewCtrl.m */; settings = {ASSET_TAGS = (); }; };
+		41B693921BDE60F600C7BB9B /* AboutSystemViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B693911BDE60F600C7BB9B /* AboutSystemViewCtrl.m */; settings = {ASSET_TAGS = (); }; };
+		41B693941BDE615900C7BB9B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41B693931BDE615900C7BB9B /* Localizable.strings */; settings = {ASSET_TAGS = (); }; };
+		41B693961BDE617D00C7BB9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41B693951BDE617D00C7BB9B /* InfoPlist.strings */; settings = {ASSET_TAGS = (); }; };
+		41B693991BDE631600C7BB9B /* SaveElectricityViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B693981BDE631600C7BB9B /* SaveElectricityViewCtrl.m */; settings = {ASSET_TAGS = (); }; };
+		41B6939C1BDE633500C7BB9B /* RemindViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 41B6939B1BDE633500C7BB9B /* RemindViewCtrl.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -221,6 +230,22 @@
 		41A177461BD7BC7400BE67F4 /* SystemServicesConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServicesConstants.h; sourceTree = "<group>"; };
 		41A177571BD7C05200BE67F4 /* SystemServicesViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemServicesViewCtrl.h; sourceTree = "<group>"; };
 		41A177581BD7C05200BE67F4 /* SystemServicesViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemServicesViewCtrl.m; sourceTree = "<group>"; };
+		41B693831BDE522400C7BB9B /* TQNetWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQNetWriter.h; sourceTree = "<group>"; };
+		41B693841BDE522400C7BB9B /* TQNetWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQNetWriter.m; sourceTree = "<group>"; };
+		41B693861BDE574300C7BB9B /* TQServerResponseManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQServerResponseManage.h; sourceTree = "<group>"; };
+		41B693871BDE574300C7BB9B /* TQServerResponseManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQServerResponseManage.m; sourceTree = "<group>"; };
+		41B693891BDE58E600C7BB9B /* TQNetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQNetData.h; sourceTree = "<group>"; };
+		41B6938A1BDE58E600C7BB9B /* TQNetData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQNetData.m; sourceTree = "<group>"; };
+		41B6938D1BDE60AB00C7BB9B /* ChargeViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChargeViewCtrl.h; sourceTree = "<group>"; };
+		41B6938E1BDE60AB00C7BB9B /* ChargeViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChargeViewCtrl.m; sourceTree = "<group>"; };
+		41B693901BDE60F600C7BB9B /* AboutSystemViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutSystemViewCtrl.h; sourceTree = "<group>"; };
+		41B693911BDE60F600C7BB9B /* AboutSystemViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutSystemViewCtrl.m; sourceTree = "<group>"; };
+		41B693931BDE615900C7BB9B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		41B693951BDE617D00C7BB9B /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		41B693971BDE631600C7BB9B /* SaveElectricityViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveElectricityViewCtrl.h; sourceTree = "<group>"; };
+		41B693981BDE631600C7BB9B /* SaveElectricityViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveElectricityViewCtrl.m; sourceTree = "<group>"; };
+		41B6939A1BDE633500C7BB9B /* RemindViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindViewCtrl.h; sourceTree = "<group>"; };
+		41B6939B1BDE633500C7BB9B /* RemindViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindViewCtrl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +300,8 @@
 				412071501BD51EDD00B99303 /* LPalmApp.m */,
 				412071411BD51CF900B99303 /* Assets.xcassets */,
 				412071461BD51CF900B99303 /* Info.plist */,
+				41B693931BDE615900C7BB9B /* Localizable.strings */,
+				41B693951BDE617D00C7BB9B /* InfoPlist.strings */,
 				412071351BD51CF900B99303 /* Supporting Files */,
 			);
 			path = LPalmTool;
@@ -291,6 +318,7 @@
 		412071521BD523AF00B99303 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				41B693821BDE518600C7BB9B /* Net */,
 				412071B91BD525D100B99303 /* ObjectDefine */,
 				412071B01BD523E000B99303 /* ownDefine */,
 				412071531BD523AF00B99303 /* BaseWebFun */,
@@ -365,6 +393,7 @@
 		412071951BD523C900B99303 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				41B6938C1BDE602D00C7BB9B /* SystemView */,
 				412071961BD523C900B99303 /* ListenView */,
 				412071A51BD523C900B99303 /* MainPage */,
 			);
@@ -546,6 +575,34 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		41B693821BDE518600C7BB9B /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				41B693831BDE522400C7BB9B /* TQNetWriter.h */,
+				41B693841BDE522400C7BB9B /* TQNetWriter.m */,
+				41B693861BDE574300C7BB9B /* TQServerResponseManage.h */,
+				41B693871BDE574300C7BB9B /* TQServerResponseManage.m */,
+				41B693891BDE58E600C7BB9B /* TQNetData.h */,
+				41B6938A1BDE58E600C7BB9B /* TQNetData.m */,
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		41B6938C1BDE602D00C7BB9B /* SystemView */ = {
+			isa = PBXGroup;
+			children = (
+				41B6938D1BDE60AB00C7BB9B /* ChargeViewCtrl.h */,
+				41B6938E1BDE60AB00C7BB9B /* ChargeViewCtrl.m */,
+				41B693901BDE60F600C7BB9B /* AboutSystemViewCtrl.h */,
+				41B693911BDE60F600C7BB9B /* AboutSystemViewCtrl.m */,
+				41B693971BDE631600C7BB9B /* SaveElectricityViewCtrl.h */,
+				41B693981BDE631600C7BB9B /* SaveElectricityViewCtrl.m */,
+				41B6939A1BDE633500C7BB9B /* RemindViewCtrl.h */,
+				41B6939B1BDE633500C7BB9B /* RemindViewCtrl.m */,
+			);
+			path = SystemView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -608,7 +665,9 @@
 				412071E71BD52A0400B99303 /* bd_etts_speech_male.dat in Resources */,
 				412071FB1BD52F7C00B99303 /* Skin in Resources */,
 				412071E61BD52A0400B99303 /* bd_etts_speech_female.dat in Resources */,
+				41B693941BDE615900C7BB9B /* Localizable.strings in Resources */,
 				412071D21BD5270F00B99303 /* KSRefresh.bundle in Resources */,
+				41B693961BDE617D00C7BB9B /* InfoPlist.strings in Resources */,
 				412071F81BD52E7F00B99303 /* NewsSetting.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -635,10 +694,12 @@
 				412071E11BD527DF00B99303 /* WKPageView.m in Sources */,
 				412071BC1BD525D100B99303 /* ObjectDefine.m in Sources */,
 				412071D11BD5270F00B99303 /* KSDefaultHeadRefreshView.m in Sources */,
+				41B6939C1BDE633500C7BB9B /* RemindViewCtrl.m in Sources */,
 				412071931BD523BA00B99303 /* TQViewController.m in Sources */,
 				4120716B1BD523AF00B99303 /* NJKWebView.m in Sources */,
 				41A1774C1BD7BC7400BE67F4 /* SSBatteryInfo.m in Sources */,
 				4120716D1BD523AF00B99303 /* NJKWebViewProgressView.m in Sources */,
+				41B6938B1BDE58E600C7BB9B /* TQNetData.m in Sources */,
 				412071AA1BD523C900B99303 /* ListenNewsCtrl.m in Sources */,
 				4120716E1BD523AF00B99303 /* UMengOnlineParameterManger.m in Sources */,
 				412071A91BD523C900B99303 /* ListenNewsCell.m in Sources */,
@@ -667,15 +728,20 @@
 				41A177511BD7BC7400BE67F4 /* SSLocalizationInfo.m in Sources */,
 				412071D01BD5270F00B99303 /* KSDefaultFootRefreshView.m in Sources */,
 				412071DF1BD527DF00B99303 /* WKMenuView.m in Sources */,
+				41B693881BDE574300C7BB9B /* TQServerResponseManage.m in Sources */,
 				412071B51BD523E000B99303 /* DeviceDetection.m in Sources */,
 				412071941BD523BA00B99303 /* TQWebView.m in Sources */,
 				41A177561BD7BC7400BE67F4 /* SSUUID.m in Sources */,
+				41B693991BDE631600C7BB9B /* SaveElectricityViewCtrl.m in Sources */,
 				412071AF1BD523C900B99303 /* MainPageViewCtrl.m in Sources */,
+				41B693921BDE60F600C7BB9B /* AboutSystemViewCtrl.m in Sources */,
 				412071D41BD5270F00B99303 /* UIScrollView+KS.m in Sources */,
+				41B693851BDE522400C7BB9B /* TQNetWriter.m in Sources */,
 				412071371BD51CF900B99303 /* main.m in Sources */,
 				41A1774E1BD7BC7400BE67F4 /* SSDiskInfo.m in Sources */,
 				41A177541BD7BC7400BE67F4 /* SSProcessInfo.m in Sources */,
 				41A177531BD7BC7400BE67F4 /* SSNetworkInfo.m in Sources */,
+				41B6938F1BDE60AB00C7BB9B /* ChargeViewCtrl.m in Sources */,
 				4166EC1E1BD91EF80072775B /* SSJailbreakCheck.m in Sources */,
 				4120718E1BD523BA00B99303 /* TQSkinManger.m in Sources */,
 			);
