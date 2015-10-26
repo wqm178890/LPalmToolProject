@@ -7,16 +7,6 @@
 //
 
 #import "LPalmApp.h"
-
-#import "TQNavigationController.h"
-#import "TQViewController.h"
-#import "TQTabBarController.h"
-
-#import "ChargeViewCtrl.h"
-#import "AboutSystemViewCtrl.h"
-#import "SaveElectricityViewCtrl.h"
-#import "RemindViewCtrl.h"
-
 #import "TQAppManger.h"
 
 @interface LPalmApp ()
@@ -31,27 +21,7 @@
     [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    
-    ChargeViewCtrl* t1 = [[ChargeViewCtrl alloc]init];
-    t1.title = @"充电";
-    TQNavigationController * nav1 = [[TQNavigationController alloc] initWithRootViewController:t1];
-    
-    SaveElectricityViewCtrl* t2 = [[SaveElectricityViewCtrl alloc]init];
-    t2.title = @"省电";
-    TQNavigationController * nav2 = [[TQNavigationController alloc] initWithRootViewController:t2];
-    
-    RemindViewCtrl* t3 = [[RemindViewCtrl alloc]init];
-    t3.title = @"提醒";
-    TQNavigationController * nav3 = [[TQNavigationController alloc] initWithRootViewController:t3];
-    
-    AboutSystemViewCtrl* t4 = [[AboutSystemViewCtrl alloc]init];
-    t4.title = @"系统";
-    TQNavigationController * nav4 = [[TQNavigationController alloc] initWithRootViewController:t4];
-    
-    TQTabBarController*  _viewController = [[TQTabBarController alloc] init];
-    _viewController.viewControllers = [NSArray arrayWithObjects:nav1, nav2, nav3, nav4, nil];
-    
-    self.window.rootViewController = _viewController;
+    self.window.rootViewController = [[TQAppManger sharedManger] initMainTabbar];
     [self.window makeKeyAndVisible];
     
 //    UIImageView* startImageView = [[UIImageView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

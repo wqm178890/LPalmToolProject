@@ -16,9 +16,12 @@
     UIImageView *_tabBarView;//自定义的覆盖原先的tarbar的控件
     UIButton * _previousBtn;//记录前一次选中的按钮
 }
+@property(nonatomic, retain) NSArray* tabbarArray;
 @end
 
 @implementation TQTabBarController
+@synthesize tabbarArray;
+@synthesize tabBarDelegate;
 
 -(BOOL)shouldAutorotate{
 //        return NO;
@@ -74,19 +77,64 @@
     [super viewDidLoad];
     
     CGRect rc = self.tabBar.bounds;
-    _tabBarView = [[UIImageView alloc]initWithFrame:self.tabBar.bounds];
+    _tabBarView = [[UIImageView alloc]initWithFrame:rc];
     _tabBarView.userInteractionEnabled = YES;
     _tabBarView.backgroundColor = [UIColor clearColor];
     _tabBarView.image = [[TQSkinManger sharedManger] getBottomBarBGImage];
     [self.tabBar addSubview:_tabBarView];
-    
-    [self creatButtonWithNormalName:@"Skin/tabbar_mainframe.png" andSelectName:@"Skin/tabbar_mainframeHL.png" andTitle:@"充电" andIndex:0];
-    [self creatButtonWithNormalName:@"Skin/tabbar_contacts.png" andSelectName:@"Skin/tabbar_contactsHL.png" andTitle:@"省电" andIndex:1];
-    [self creatButtonWithNormalName:@"Skin/tabbar_discover.png" andSelectName:@"Skin/tabbar_discoverHL.png" andTitle:@"提醒" andIndex:2];
-    [self creatButtonWithNormalName:@"Skin/tabbar_me.png" andSelectName:@"Skin/tabbar_meHL.png" andTitle:@"系统" andIndex:3];
 }
 
-- (void)creatButtonWithNormalName:(NSString *)normal andSelectName:(NSString *)selected andTitle:(NSString *)title andIndex:(int)index{
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    NSLog(@"viewWillDisappear");
+    //    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    //    [tempAppDelegate.LeftSlideVC setPanEnabled:NO];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"viewWillAppear");
+    //    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    //    [tempAppDelegate.LeftSlideVC setPanEnabled:NO];
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    
+}
+
+- (void)dealloc{
+    self.tabBarDelegate = nil;
+    self.tabbarArray = nil;
+    
+    [super dealloc];
+}
+
+- (void)initTabBarView:(NSArray*)array{
+    if (array && array.count > 0) {
+        self.tabbarArray = array;
+        
+        for (NSInteger index = 0; index < array.count; index++) {
+            NSDictionary* dict = [array objectAtIndex:index];
+            [self creatButtonWithNormalName:[dict objectForKey:@"normal"] andSelectName:[dict objectForKey:@"select"] andTitle:[dict objectForKey:@"title"] andIndex:index];
+        }
+    }
+    
+    for (UIView* obj in self.tabBar.subviews) {
+        if (obj != _tabBarView) {
+            [obj removeFromSuperview];
+        }
+    }
+    
+    UIButton * button = _tabBarView.subviews[0];
+    [self changeViewController:button];
+}
+
+- (void)creatButtonWithNormalName:(NSString *)normal andSelectName:(NSString *)selected andTitle:(NSString *)title andIndex:(NSInteger)index{
     
     CGFloat buttonW = _tabBarView.frame.size.width / 4;
     CGFloat buttonH = _tabBarView.frame.size.height;
@@ -132,6 +180,7 @@
     
 }
 
+
 #pragma mark 按钮被点击时调用
 - (void)changeViewController:(UIButton *)sender
 {
@@ -155,43 +204,9 @@
         [_previousBtn setTitleColor:curColor forState:UIControlStateNormal];
     }
     
-    [TQAppManger sharedManger].mainNavigateCtrl = [self.viewControllers objectAtIndex:self.selectedIndex];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    
-    NSLog(@"viewWillDisappear");
-//    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-//    [tempAppDelegate.LeftSlideVC setPanEnabled:NO];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-
-    for (UIView* obj in self.tabBar.subviews) {
-        if (obj != _tabBarView) {
-            [obj removeFromSuperview];
-        }
+    if (self.tabBarDelegate && [self.tabBarDelegate respondsToSelector:@selector(tabBarDidSelectViewController:didSelectItem:)]) {
+        [self.tabBarDelegate tabBarDidSelectViewController:[self.viewControllers objectAtIndex:self.selectedIndex] didSelectItem:[self.tabbarArray objectAtIndex:self.selectedIndex]];
     }
-    
-    UIButton * button = _tabBarView.subviews[0];
-    [self changeViewController:button];
-    
-    NSLog(@"viewWillAppear");
-//    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-//    [tempAppDelegate.LeftSlideVC setPanEnabled:NO];
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
-}
-
-
-
 
 @end

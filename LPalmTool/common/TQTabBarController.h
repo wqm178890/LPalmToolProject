@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TQTabBarController : UITabBarController
+@protocol TQTabBarControllerDelegate <UITabBarControllerDelegate>
 
+@optional
+- (void)tabBarDidSelectViewController:(UIViewController *)viewController didSelectItem:(NSDictionary*)item;
+
+@end
+
+@interface TQTabBarController : UITabBarController
+@property(nonatomic, assign) id<TQTabBarControllerDelegate> tabBarDelegate;
+
+- (void)initTabBarView:(NSArray*)array;
 @end

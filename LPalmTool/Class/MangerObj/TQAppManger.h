@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "TQNavigationController.h"
+#import "TQTabBarController.h"
 
 @interface TQAppManger : NSObject
 @property(nonatomic, retain) TQNavigationController* mainNavigateCtrl;
 
 + (TQAppManger *)sharedManger;
-
+- (TQTabBarController*)initMainTabbar;
 - (void)initUMengTrack;
 
 @end

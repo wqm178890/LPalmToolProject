@@ -5,3 +5,8 @@
   Created by 林述灿 on 15/10/26.
   Copyright © 2015年 LSC. All rights reserved.
 */
+
+"charget title" = "充电";
+"power save title" = "省电";
+"remind title" = "提醒";
+"system title" = "系统";
